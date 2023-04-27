@@ -134,8 +134,6 @@ public class MortgageCalculator {
     ) {
         float monthlyInterest = this.annualInterest / PERCENT / MONTHS_IN_YEAR;
         float numberOfPayments = this.years * MONTHS_IN_YEAR;
-        System.out.println( "monthly interest"+monthlyInterest);
-        System.out.println("numberofpayments"+ numberOfPayments);
         double balance = this.principal
                 * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
                 / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
